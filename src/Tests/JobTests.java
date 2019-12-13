@@ -28,7 +28,7 @@ public class JobTests {
 
     @Test
     public void testJobConstructorSetsAllFields(){
-        assertEquals("Product tester", job3.getName());
+        assertEquals("Product Tester", job3.getName());
         assertEquals("ACME", job3.getEmployer().getValue());
         assertEquals("Desert", job3.getLocation().getValue());
         assertEquals("Quality Control", job3.getPositionType().getValue());
@@ -42,9 +42,9 @@ public class JobTests {
 
     @Test
     public void returnJobInfo(){
-        String output = String.format("\nId: %d\n" + "Name: %s\n" +"Employer: %s\n" +
-                "Location: %s\n" + "Position Type: %s\n" + "Core Competency: %s\n", job3.getId(), job3.getName(), job3.getEmployer(),
-                job3.getLocation(), job3.getPositionType(), job3.getCoreCompetency());
+        String output = String.format("\nId: %d\n" + "Name: %s \n" +"Employer: %s \n" +
+                "Location: %s \n" + "Position Type: %s \n" + "Core Competency: %s \n", job3.getId(), job3.getName(), job3.getEmployer().getValue(),
+                job3.getLocation().getValue(), job3.getPositionType().getValue(), job3.getCoreCompetency().getValue());
         assertEquals(output, job3.toString());
     }
 }
